@@ -1,0 +1,167 @@
+ @tailwind base;
+@tailwind components;
+@tailwind utilities;
+@import "flowbite/src/themes/default";
+
+
+nav {
+    box-shadow: 0px 1px 15px 0px rgb(56, 56, 58);
+}
+
+.NavBarLink {
+    @apply block py-2 px-3 text-lg relative text-white before:h-[2px] before:w-0 before:bg-main before:absolute before:left-0 before:bottom-0 before:rounded-lg hover:before:w-full before:transition-all before:duration-500 active:before:w-full mx-1
+}
+
+.active::before {
+   width: 100%;
+}
+
+.container {
+    width: 100%;
+    margin: auto;
+  }
+  @media (min-width: 450px) {
+    .container {
+      max-width: 460px;
+    }
+  }
+  @media (min-width: 640px) {
+    .container {
+      max-width: 600px;
+    }
+  }
+  @media (min-width: 768px) {
+    .container {
+      max-width: 768px;
+    }
+  }
+  
+  @media (min-width: 1024px) {
+    .container {
+      max-width: 1024px;
+    }
+  }
+  @media (min-width: 1280px) {
+    .container {
+      max-width: 1280px;
+    }
+  }
+  
+  @media (min-width: 1536px) {
+    .container {
+      max-width: 1536px;
+    }
+  }
+
+  #RecentGames {
+    background-image: url("../src/assets/Images/bg/Back-093d61ca.png");
+    background-size: contain;
+  }
+
+
+  #arrow-icon-one {
+    transition: 0.4s;
+    transform: translateX(-60%);
+  }
+  
+  #arrow-icon-two {
+    transition: 0.5s;
+    transform: translateX(-30%);
+  }
+  
+  .game-cart:hover #arrow-icon-three {
+    animation: color_anim 1s infinite 0.2s;
+  }
+  
+  .game-cart:hover #arrow-icon-one {
+    transform: translateX(0%);
+    animation: color_anim 1s infinite 0.6s;
+  }
+  
+  .game-cart:hover #arrow-icon-two {
+    transform: translateX(0%);
+    animation: color_anim 1s infinite 0.4s;
+  }
+  
+  /* SVG animations */
+  @keyframes color_anim {
+    0% {
+      fill: white;
+    }
+  
+    50% {
+      fill: red;
+    }
+  
+    100% {
+      fill: #9ee5fa;
+    }
+  }
+
+  /* ========== Loading ==========  */
+.spinner {
+  position: absolute;
+  z-index: 999999999999999999;
+  width: 128px;
+  height: 128px;
+  top: calc(50% - 64px);
+  left: calc(50% - 64px);
+  transform: perspective(206px) rotateX(45deg);
+}
+
+.outer {
+  box-sizing: border-box;
+  animation: spin 3s linear infinite;
+  height: 100%;
+}
+
+.inner {
+  position: absolute;
+  z-index: 999999999999999999;
+  border-radius: 50%;
+  width: 64px;
+  height: 64px;
+}
+
+.tl {
+  top: 0;
+  left: 0;
+  border-top: 8px solid red;
+  border-left: 10px solid red;
+  animation: spin 1s ease-in-out infinite;
+}
+
+.tr {
+  top: 0;
+  right: 0;
+  border-top: 8px solid #0575e6;
+  border-right: 10px solid #0575e6;
+  animation: spin 1s ease-in-out infinite;
+}
+
+.br {
+  bottom: 0;
+  right: 0;
+  border-bottom: 8px solid #00f260;
+  border-right: 10px solid #00f260;
+  animation: spin 1s ease-in-out infinite;
+}
+
+.bl {
+  bottom: 0;
+  left: 0;
+  border-bottom: 8px solid #e9e93e;
+  border-left: 10x solid #e9e93e;
+  animation: spin 1s ease-in-out infinite;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
