@@ -38,7 +38,7 @@ nav {
   
   @media (min-width: 1024px) {
     .container {
-      max-width: 1024px;
+      max-width: 940px;
     }
   }
   @media (min-width: 1280px) {
